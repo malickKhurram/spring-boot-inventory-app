@@ -1,9 +1,9 @@
 package com.eperfections.inventory.user;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+@Entity
+@Table
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
