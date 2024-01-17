@@ -1,4 +1,18 @@
-# Spring boot based Inventory app.
+# Spring Boot Inventory Application with MySQL
 
-This is a sample spring boot inventory application.
-It uses mysql as database and exposes REST end points.
+## Overview
+
+This is a simple inventory management application built with Spring Boot and MySQL. The application allows users to manage and track inventory items, including adding new items, updating quantities, and viewing the current stock.
+
+## Features
+
+- **CRUD Operations:** Perform Create, Read, Update, and Delete operations on inventory items.
+- **MySQL Database:** Utilizes a MySQL database to store and retrieve inventory data.
+- **RESTful API:** Exposes a RESTful API for interacting with the inventory system.
+- **Swagger Documentation:** Includes Swagger documentation for easy API exploration.
+
+## Technologies Used
+
+- [Spring Boot](https://spring.io/projects/spring-boot): Simplifies the development of Java applications.
+- [MySQL](https://www.mysql.com/): A popular open-source relational database.
+- [Swagger](https://swagger.io/): Provides API documentation and testing capabilities.
