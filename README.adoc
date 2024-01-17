@@ -1,0 +1,4 @@
+# Spring boot based Inventory app.
+
+This is a sample spring boot inventory application.
+It uses mysql as database and exposes REST end points.
