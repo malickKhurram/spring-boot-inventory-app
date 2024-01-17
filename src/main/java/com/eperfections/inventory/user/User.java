@@ -14,6 +14,9 @@ public class User {
     private String username;
     private String password;
 
+    public User(){
+
+    }
     public User(long userId, String name, String location, String phone, String username, String password) {
         this.userId = userId;
         this.name = name;
