@@ -9,7 +9,7 @@ import java.util.List;
 @Configuration
 public class UserConfig {
     @Bean
-    CommandLineRunner commandLineRunnerUser(UserRepository userRepository){
+    CommandLineRunner initUsers(UserRepository userRepository){
         return args -> {
             User user = new User("Khurram Shehzad","Islamabad Pakistan","123456","admin","admin");
             userRepository.saveAll(List.of(user));

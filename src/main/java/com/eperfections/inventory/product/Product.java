@@ -7,10 +7,6 @@ import java.time.LocalDate;
 @Table
 public class Product {
     @Id
-//    @SequenceGenerator(name = "product_sequenece",
-//            sequenceName = "product_sequence",
-//            allocationSize = 1
-//    )
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long productId;
     private String productName;

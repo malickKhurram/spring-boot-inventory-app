@@ -1,12 +1,10 @@
 package com.eperfections.inventory.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "https://hoppscotch.io", maxAge = 3600)
 @RestController
 @RequestMapping(path = "api/v1/user")
 public class UserController {
@@ -20,4 +18,22 @@ public class UserController {
     public List<User> getUsers(){
         return userService.getUsers();
     }
+
+    @PostMapping
+    public void addUser(@RequestBody User user){
+        userService.addUser(user);
+    }
+    @DeleteMapping(path = "{userId}")
+    public void deleteUser(@PathVariable("userId") Long id){
+        userService.deleteUser(id);
+    }
+    @PutMapping(path="{userId}")
+    public void updateUser(
+            @PathVariable("userId") Long userId,
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) String location
+    ){
+        userService.updateUser(userId,name,location);
+    }
+
 }

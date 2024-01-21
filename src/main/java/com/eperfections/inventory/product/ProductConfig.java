@@ -10,7 +10,7 @@ import java.util.List;
 @Configuration
 public class ProductConfig {
     @Bean
-    CommandLineRunner commandLineRunner(ProductRepository repository){
+    CommandLineRunner initProducts(ProductRepository repository){
         return args -> {
             Product product1 = new Product(
                     "gasoline chainsaw",
